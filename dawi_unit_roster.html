@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_dwarf_roster.css') }}">
+    <title>Вікторина</title>
+</head>
+<body>
+    <h1>Нажміть на кнопку 'фільтрувати' для будь-якого стовпчика для фільтрування у порядку спадання або зростання</h1>
+
+    <form method="POST" action="">
+        <table>
+            <thead>
+                <tr>
+                    {% for i in range(12) %}
+                        <th>
+                            <span>Column {{ i + 1 }}</span>
+                            <br>
+                            <input type="hidden" name="column" value="{{ i }}">
+                            <input type="hidden" name="order" value="asc">
+                            <input type="submit" value="↑" name="sort_asc">  <!-- Кнопка для зростання -->
+                            <input type="submit" value="↓" name="sort_desc"> <!-- Кнопка для спаду -->
+                        </th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for hero in data_list %}
+                <tr>
+                    {% for info in hero %}
+                        <td>{{ info }}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </form>
+</body>
+</html>

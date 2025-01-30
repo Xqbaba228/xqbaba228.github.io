@@ -1,0 +1,45 @@
+/* Стиль для таблиці */
+table {
+    width: 100%;
+    border-collapse: collapse; /* Знімає відступи між стінками таблиці */
+    margin: 20px 0; /* Відступи зверху і знизу */
+    font-size: 18px;
+    text-align: left;
+    font-family: Monaco;
+}
+
+/* Стиль для заголовка стовпців */
+th, td {
+    border: 1px solid #dddddd; /* Стінки між стовпцями */
+    padding: 8px; /* Відступи всередині клітинок */
+    font-family: Monaco;
+}
+
+/* Стиль для рядків */
+tr:nth-child(even) {
+    background-color: #f2f2f2; /* Фон для парних рядків */
+    font-family: Monaco;
+}
+
+/* Стиль для заголовка таблиці */
+thead {
+    background-color: #ece6e6; /* Темний фон заголовку */
+    color: black; /* Текст білим */
+    font-family: Monaco;
+}
+
+/* Стиль для кнопок сортування */
+input[type="submit"] {
+    background-color: #4CAF50; /* Зелений фон кнопок */
+    color: whitesmoke; /* Білий текст */
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-top: 5px;
+    font-family: Monaco;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049; /* Трохи темніший відтінок при наведенні */
+    
+}
